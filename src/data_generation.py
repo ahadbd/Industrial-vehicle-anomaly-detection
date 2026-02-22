@@ -45,5 +45,9 @@ def generate_telematics_data(n_samples=1500, random_state=42):
 
 if __name__ == "__main__":
     df = generate_telematics_data()
+    
+    # Remove any extra blank row (ensure exact 1500 rows)
+    df = df.reset_index(drop=True)
+    
     df.to_csv("data/synthetic_telematics.csv", index=False)
-    print("Dataset generated and saved to data/synthetic_telematics.csv")
+    print(f"Dataset generated and saved to data/synthetic_telematics.csv ({len(df)} rows)")
