@@ -45,5 +45,5 @@ def generate_telematics_data(n_samples=1500, random_state=42):
 
 if __name__ == "__main__":
     df = generate_telematics_data()
-    df.to_csv("D:\XAMK\Github\Industrial-vehicle-anomaly-detection\data\synthetic_telematics.csv", index=False)
+    df.to_csv("data/synthetic_telematics.csv", index=False)
     print("Dataset generated and saved to data/synthetic_telematics.csv")
